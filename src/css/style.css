@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background: #000 url(../images/bg-repeat.jpg);
+    background-size: 100% 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 25px;
+}
+
+main .page .text {
+    color: #FFF;
+    width: 300px;
+}
+
+main .page .text h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 11px 0px;
+}
+
+main .page .text p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+main .page .form {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 378px;
+    background-color: #FFF;
+    box-shadow: 1px 3px 5px #000;
+    padding: 20px;
+}
+
+main .page .form input {
+    display: flex;
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+main .page .form input:first-child {
+    margin-top: 0px;
+}
+
+main .page .form input.message {
+    display: flex;
+    padding: 5px 10px 60px 10px;
+}
+
+main .page .form .required-field.hide {
+    display: none;
+    color: #F52E2E;
+    font-size: 8px;
+    font-weight: 400;
+  
+}
+
+main .page .form p {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+main .page .form .btn-send {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: #3CCC87;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0px 1px 3px #000;
+}
+
+main .page .form .btn-send:hover {
+    background-color: #1ab34d;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}

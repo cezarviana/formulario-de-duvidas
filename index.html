@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,40 @@
 
     <title>Formulário</title>
 </head>
+
 <body>
+    <main>
+        <section class="page">
+            <div class="text">
+                <h1>FICOU COM DÚVIDA?<br>NOS MANDE UMA MENSAGEM!</h1>
+                <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos
+                    de 24h.</p>
+            </div>
+            <div class="form">
 
+                <input type="text" name="name" placeholder="Nome completo *">
+                <span class="required-field hide">campo obrigatório</span>
 
+                <input type="text" name="email" placeholder="Email *">
+                <span class="required-field hide">campo obrigatório</span>
 
+                <input type="text" name="phone" placeholder="Telefone *">
+                <span class="required-field hide">campo obrigatório</span>
 
+                <input type="text" name="message" placeholder="Mensagem *" class="message">
+                <span class="required-field hide">campo obrigatório</span>
 
-    <script src="form"></script>
-    
+                <p>* campos obrigatórios</p>
+
+                <button class="btn-send">Enviar</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./src/js/form.js"></script>
+
 </body>
+
 </html>
