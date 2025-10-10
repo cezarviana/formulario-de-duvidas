@@ -43,6 +43,7 @@ main .page .text p {
 main .page .form {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 340px;
     height: 378px;
     background-color: #FFF;
@@ -69,14 +70,6 @@ main .page .form input.message {
     padding: 5px 10px 60px 10px;
 }
 
-main .page .form .required-field.hide {
-    display: none;
-    color: #F52E2E;
-    font-size: 8px;
-    font-weight: 400;
-  
-}
-
 main .page .form p {
     padding: 10px;
     font-size: 15px;
@@ -96,7 +89,7 @@ main .page .form .btn-send {
 }
 
 main .page .form .btn-send:hover {
-    background-color: #1ab34d;
+    background-color: #00C22B;
     font-size: 15px;
     font-weight: 700;
     transition: 0.3s ease;
