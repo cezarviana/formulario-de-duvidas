@@ -71,13 +71,13 @@ main .page .form input.message {
 }
 
 main .page .form p {
-    padding: 10px;
     font-size: 15px;
     font-weight: 400;
 }
 
 main .page .form .btn-send {
     padding: 10px;
+    margin: 20px;
     border: none;
     border-radius: 5px;
     color: #FFF;

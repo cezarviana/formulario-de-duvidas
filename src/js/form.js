@@ -12,9 +12,10 @@ figma.
     2.3. Function
         2.3.1. Se não preenchido =>:
             2.3.1.1. borda vermelha;
-            2.3.1.2. "campo obrigatório";
+            2.3.1.2. "campo obrigatório", uma única vez;
         2.3.2. Se preenchido =>:
             2.3.2.1. borda verde;
+            2.3.2.2. remover "campo obrigatório"
 
 */
 
@@ -27,30 +28,52 @@ btnSend.addEventListener("click", () => {
 
     inputs.forEach((input) => {
 
+        const errorSpan = document.createElement("span");
 
         if (input.value === "") {
-            
-            input.style.borderColor = "#F52E2E";
-            requiredField()
 
-            //rodar só 1 vez
+            displayError();
+
+
 
         } else if (input.value !== "") {
 
-            input.style.borderColor = "#00C22B"
-            // requiredField.remove();
-            //remove "campo obrigatório"
+            removeError();
 
-        } 
+        }
 
-        function requiredField() {
-            const requiredField = document.createElement("span");
-            requiredField.classList.add("required-field");
-            requiredField.textContent = "campo obrigatório";
-            requiredField.style.fontSize = "8px";
-            requiredField.style.color = "#F52E2E";
-            input.after(requiredField);
-        } return;
+
+        function removeError() {
+
+            input.style.borderColor = "#00C22B";
+
+
+            if (input.nextElementSibling.classList.contains("error-class")) {
+
+                input.nextElementSibling.remove();
+
+            }
+        };
+
+
+        function displayError() {
+
+            if (!input.nextElementSibling.classList.contains("error-class")) {
+
+                input.style.borderColor = "#F52E2E";
+
+                errorSpan.classList.add("error-class");
+                errorSpan.textContent = "campo obrigatório";
+                errorSpan.style.fontSize = "8px";
+                errorSpan.style.color = "#F52E2E";
+                errorSpan.style.padding = "0";
+
+                input.after(errorSpan);
+
+            }
+        };
+
+
     });
 
 });
