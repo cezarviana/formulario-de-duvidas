@@ -15,65 +15,32 @@ figma.
             2.3.1.2. "campo obrigatório", uma única vez;
         2.3.2. Se preenchido =>:
             2.3.2.1. borda verde;
-            2.3.2.2. remover "campo obrigatório"
-
+            2.3.2.2. remover "campo obrigatório";
 */
 
 const btnSend = document.querySelector(".btn-send");
 const inputs = document.querySelectorAll(".input");
 
+btnSend.addEventListener("click", (e) => {
 
-
-btnSend.addEventListener("click", () => {
+    e.preventDefault();
 
     inputs.forEach((input) => {
 
-        const errorSpan = document.createElement("span");
+        if (input.value) {
 
-        if (input.value === "") {
+            input.classList.remove("error");
+            input.classList.add("filled");
+            input.nextElementSibling.classList.add("hide");
 
-            displayError();
+        } else {
 
-
-
-        } else if (input.value !== "") {
-
-            removeError();
+            input.classList.remove("filled");
+            input.classList.add("error");
+            input.nextElementSibling.classList.remove("hide");
 
         }
 
-
-        function removeError() {
-
-            input.style.borderColor = "#00C22B";
-
-
-            if (input.nextElementSibling.classList.contains("error-class")) {
-
-                input.nextElementSibling.remove();
-
-            }
-        };
-
-
-        function displayError() {
-
-            if (!input.nextElementSibling.classList.contains("error-class")) {
-
-                input.style.borderColor = "#F52E2E";
-
-                errorSpan.classList.add("error-class");
-                errorSpan.textContent = "campo obrigatório";
-                errorSpan.style.fontSize = "8px";
-                errorSpan.style.color = "#F52E2E";
-                errorSpan.style.padding = "0";
-
-                input.after(errorSpan);
-
-            }
-        };
-
-
     });
-
+       
 });

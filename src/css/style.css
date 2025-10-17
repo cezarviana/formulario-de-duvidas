@@ -51,7 +51,7 @@ main .page .form {
     padding: 20px;
 }
 
-main .page .form input {
+main .page .form .input {
     display: flex;
     border: solid 1px #000;
     border-radius: 5px;
@@ -61,14 +61,34 @@ main .page .form input {
     margin-top: 15px;
 }
 
-main .page .form input:first-child {
+main .page .form .input:first-child {
     margin-top: 0px;
 }
 
-main .page .form input.message {
+main .page .form .input.message {
     display: flex;
     padding: 5px 10px 60px 10px;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
 }
+
+main .page .form .input.filled {
+    border-color: #00C22B;
+}
+
+main .page .form .span {
+    color: #F52E2E;
+    font-size: 8px;
+    padding: 0px;
+}
+main .page .form .span.hide {
+    display: none;
+}
+
+main .page .form .input.error {
+    border-color: #F52E2E;
+}
+
 
 main .page .form p {
     font-size: 15px;
